@@ -50,6 +50,7 @@ header {
     /* background: yellow; */
 
     .logo {
+      display: inline-block;
       width: 14.375rem;
     }
   }
