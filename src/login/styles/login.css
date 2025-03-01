@@ -1,0 +1,175 @@
+@import "/src/common/a11y.css";
+
+:root {
+  --default-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --height-45: 2.8125rem;
+  --default-font-color: #121212;
+  --green-color: #03cf5d;
+  --light-blue-color: #e9f0fd;
+  --gray-color: #999999;
+  --white-color: #fff;
+  --border-color: #dadada;
+  --focus-color: #24388d;
+}
+
+html,
+body {
+  font-family: "SUIT", snas-serif;
+  font-size: var(--default-font-size);
+  color: var(--default-font-color);
+  margin: 0;
+}
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid var(--focus-color);
+}
+
+header {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3.75rem;
+
+  .brand {
+    margin: 0 auto;
+    /* background: yellow; */
+
+    .logo {
+      width: 14.375rem;
+    }
+  }
+}
+
+fieldset {
+  border: 0;
+}
+
+/* 로그인 박스 */
+.login_container {
+  display: block;
+  text-align: center;
+  padding: 0 0.875rem;
+
+  @media (min-width: 768px) {
+    text-align: center;
+    width: 31.25rem;
+    margin: 0 auto;
+  }
+}
+
+/* 로그인 폼 */
+.login_box {
+  margin: 0 auto;
+  text-align: center;
+
+  .input {
+    position: relative;
+    display: block;
+    text-align: center;
+    border: 1px solid var(--border-color);
+
+    &.id {
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      font-size: var(--small-font-size);
+      height: var(--height-45);
+      padding: 0 1.25rem;
+
+      &:focus {
+        outline-color: var(--green-color);
+        background: var(--light-blue-color);
+      }
+    }
+  }
+}
+
+/* 로그인 버튼 */
+.login {
+  margin-top: 1.25rem;
+  .login_btn {
+    border: none;
+    width: 100%;
+    color: var(--white-color);
+    background: var(--green-color);
+    height: var(--height-45);
+    font-size: var(--default-font-size);
+  }
+}
+
+.login_keep_checkbox {
+  --checkbox-height: 1.5rem;
+
+  margin-top: 0.625rem;
+  display: flex;
+  flex-wrap: nowrap;
+
+  justify-content: end;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+
+  input {
+    display: none;
+  }
+
+  .login_keep {
+    display: flex;
+  }
+
+  .keep_text {
+    line-height: var(--checkbox-height);
+  }
+
+  .keep_text::before {
+    display: inline-block;
+    content: "";
+    width: var(--checkbox-height);
+    margin-left: 0.3125rem;
+  }
+
+  .login_keep_check + label {
+    background-repeat: no-repeat;
+    background-image: url("../images/unchecked.svg");
+    background-size: var(--checkbox-height) var(--checkbox-height);
+  }
+
+  .login_keep_check:checked + label {
+    background-repeat: no-repeat;
+    background-image: url("../images/checked.svg");
+    background-size: var(--checkbox-height) var(--checkbox-height);
+  }
+
+  .ip_secure {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+
+      a {
+        font-size: var(--default-font-size);
+        text-decoration: none;
+      }
+
+      .security_check + label::after {
+        content: "OFF";
+        color: var(--gray-color);
+        margin-left: 0.3125rem;
+      }
+
+      .security_check:checked + label::after {
+        content: "ON";
+        color: var(--green-color);
+      }
+    }
+  }
+}
