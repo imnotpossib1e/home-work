@@ -15,6 +15,6 @@
 
 ## 4주 차 과제 Login
 
-- [Logi HTML](./src/login/login.html)
+- [Login HTML](./src/login/login.html)
 - [Login CSS](./src/login/styles/login.css)
 - [회고](./src/login/login.md)
