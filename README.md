@@ -18,3 +18,11 @@
 - [Login HTML](./src/login/login.html)
 - [Login CSS](./src/login/styles/login.css)
 - [회고](./src/login/login.md)
+
+## 5주 차 과제 apple
+
+- [apple card-component HTML](./src/apple/card-component.html)
+- [apple card-component CSS](./src/apple/styles/card-component.css)
+- [apple HTML](./src/apple/apple.html)
+- [apple CSS](./src/apple/styles/apple.css)
+- [회고](./src/apple/apple.md)

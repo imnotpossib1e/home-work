@@ -1,0 +1,23 @@
+@import "./card-component.css";
+
+/* 카드 레이아웃 */
+
+main{
+  .page-section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--base-spacing);
+    margin-bottom: var(--base-spacing);
+    
+    
+    &.second-section{
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .logo{
+          margin-top: var(--large-spacing);
+        }
+      }
+    }
+  }
+}
